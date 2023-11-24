@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!--Bootstrap 5.3-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--StyleSheets-->
+    <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+<body>
+    <div class="container text-start container pt-5 ">
+        <input class="container_toggle" type="checkbox" id="switch" name="mode">
+        <label for="switch">Toggle</label>
+    </div>
+
+    <audio id="clickSound" src="click-sound.mp3"></audio>
+
+    <div class="container">
+        <img id="randomImage" class="position-absolute start-50 translate-middle-x" src="media/gatemedia.png" alt="" width="667" height="150" style="position:absolute; top:50px;">
+    </div>
+
+    <nav class="navbar navbars justify-content-end" id="inner1">
+        <a class="navbar-brand " href="#">
+            <img src="media/mount.png" alt="Light Theme Image" width="1580" height="250" class="theme-image light">
+            <img src="media/mountDark.png" alt="Dark Theme Image" width="266" height="250" class="theme-image dark">
+        </a>
+    </nav>
+
+    <div class="align-self-end shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+        <div class="navbar-bg pb-3 " id="inner2">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col col-lg-6">
+                        <nav class="navbar navbar-expand-lg">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="index.html">
+                                    <img src="media/favicon.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                                    GateMedia
+                                </a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="feedback.html">Feedback</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="py-5" style="background-image: url(media/boruto1.jpg); background-color: darkslategrey; background-blend-mode: multiply;">
+        <div class="container col col-lg-8 py-3">
+            <!-- Comment Section -->
+            <div class="container mt-5">
+                <h2 class="text-center text-white mb-4">Leave your opinion about the site</h2>
+                <form id="commentForm">
+                    <div class="mb-3">
+                        <p for="nickname" class="form-label text-white">Nickname:</p>
+                        <input type="text" class="form-control " id="nickname" required>
+                    </div>
+                    <div class="mb-3">
+                        <p for="comment " class="form-label text-white">Comment:</p>
+                        <textarea class="form-control" id="commen   t" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Comment</button>
+                </form>
+
+                <div id="commentsList" class="mt-4">
+                    <!-- Comments will be displayed here dynamically -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Temxli/temxli.github.io" role="button">
+                    <i class="fab fa-github"></i>
+                    <img<>
+                </a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            � 2020 Copyright:
+            <a class="text-white" href="">GateMedia.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <script src="https://kit.fontawesome.com/7d7a0f5866.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/videoplayer.js"></script>
+</body>
+</html>

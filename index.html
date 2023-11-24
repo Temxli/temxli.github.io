@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,16 +11,21 @@
 
 </head>
 <body>
-    <p id="changeText" class="changeable-text">Hover over me</p>
+    <div class="container text-start container pt-5">
+        <input class="container_toggle" type="checkbox" id="switch" name="mode">
+        <label for="switch">Toggle</label>
+    </div>
+
     <audio id="clickSound" src="click-sound.mp3"></audio>
 
-    <div class="">
+    <div class="container">
         <img id="randomImage" class="position-absolute start-50 translate-middle-x" src="media/gatemedia.png" alt="" width="667" height="150" style="position:absolute; top:50px;">
     </div>
 
     <nav class="navbar navbars justify-content-end" id="inner1">
         <a class="navbar-brand " href="#">
-            <img src="media/mount.png" alt="Bootstrap" width="1580" height="250">
+            <img src="media/mount.png" alt="Light Theme Image" width="1580" height="250" class="theme-image light">
+            <img src="media/mountDark.png" alt="Dark Theme Image" width="266" height="250" class="theme-image dark">
         </a>
     </nav>
 
@@ -31,7 +36,7 @@
                     <div class="col col-lg-6">
                         <nav class="navbar navbar-expand-lg">
                             <div class="container-fluid">
-                                <a class="navbar-brand" href="#">
+                                <a class="navbar-brand" href="index.html">
                                     <img src="media/favicon.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                                     GateMedia
                                 </a>
@@ -41,13 +46,10 @@
                                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
-                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">Features</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Pricing</a>
+                                            <a class="nav-link" href="feedback.html">Feedback</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -58,73 +60,516 @@
             </div>
         </div>
     </div>
-    <div class="searchbar container col col-lg-6 border border-success rounded border-3 align-self-end" style="position:relative; top:210px;">
-        <nav class="navbar">
-            <div class="container-fluid">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+    <div class="d-flex ">
+
+        <div class="w-25 P-2 flex-fill container">
+            <div class="col col-lg-12 offset-md-8">
+                <div class="list-group py-2">
+                    <button type="button" class="list-group-item list-group-item-action bg-dark active" aria-current="true">
+                        Recent Updates
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Demon Slayer: Kimetsu no Yaiba (2023) - Episodes 1-18 of 24. Next Episode: 19 (Scheduled for release on November 30). Tanjiro Kamado, a young boy turned demon slayer, seeks to avenge his family and cure his sister Nezuko, who has been turned into a demon.">
+                        Demon Slayer: Kimetsu no Yaiba
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="hover focus" data-bs-content="My Hero Academia (2023) - Episodes 1-21 of 24. Next Episode: 22 (Scheduled for release on November 30). In a world where most of the population has superpowers known as 'quirks,' Izuku Midoriya dreams of becoming a hero despite being quirkless.">
+                        My Hero Academia
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="hover focus" data-bs-content="Attack on Titan (2023) - Episodes 1-22 of 24. Eren Yeager, Mikasa Ackerman, and Armin Arlert, along with the Survey Corps, continue their battle against the mysterious Titans that threaten humanity's existence within enormous walled cities.">
+                        Attack on Titan
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="hover focus" data-bs-content="One Piece (2023) - Ongoing. Monkey D. Luffy and his diverse crew of pirates set sail in search of the legendary treasure known as One Piece.">
+                        One Piece
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="hover focus" data-bs-content="Jujutsu Kaisen (2023) - Second Season Episodes 1-18 of 23. Next Episode: 19 (Scheduled for release on November 30). Yuji Itadori joins a secret organization to battle curses after consuming a powerful cursed object.">
+                        Jujutsu Kaisen
+                    </button>
+                </div>
+
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <!-- Monday -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#mondayCollapse" aria-expanded="true" aria-controls="mondayCollapse">
+                                Monday
+                            </button>
+                        </h2>
+                        <div id="mondayCollapse" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <!-- Anime Schedule for Monday -->
+                                <ul>
+                                    <li><strong>My Hero Academia</strong> (20:00)</li>
+                                    <li><strong>Attack on Titan</strong> (21:00)</li>
+                                    <li><strong>Demon Slayer</strong> (22:30)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tuesday -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tuesdayCollapse" aria-expanded="false" aria-controls="tuesdayCollapse">
+                                Tuesday
+                            </button>
+                        </h2>
+                        <div id="tuesdayCollapse" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <!-- Anime Schedule for Tuesday -->
+                                <ul>
+                                    <li><strong>One Piece</strong> (22:00)</li>
+                                    <li><strong>Jujutsu Kaisen</strong> (23:30)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wednesday -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wednesdayCollapse" aria-expanded="false" aria-controls="wednesdayCollapse">
+                                Wednesday
+                            </button>
+                        </h2>
+                        <div id="wednesdayCollapse" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <!-- Anime Schedule for Wednesday -->
+                                <ul>
+                                    <li><strong>Naruto: Shippuden</strong> (20:30)</li>
+                                    <li><strong>Death Note</strong> (22:30)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thursday -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#thursdayCollapse" aria-expanded="false" aria-controls="thursdayCollapse">
+                                Thursday
+                            </button>
+                        </h2>
+                        <div id="thursdayCollapse" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <!-- Anime Schedule for Thursday -->
+                                <ul>
+                                    <li><strong>Fullmetal Alchemist: Brotherhood</strong> (20:00)</li>
+                                    <li><strong>Hunter x Hunter</strong> (22:00)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Friday -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fridayCollapse" aria-expanded="false" aria-controls="fridayCollapse">
+                                Friday
+                            </button>
+                        </h2>
+                        <div id="fridayCollapse" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <!-- Anime Schedule for Friday -->
+                                <ul>
+                                    <li><strong>Dragon Ball Z</strong> (18:00)</li>
+                                    <li><strong>Cowboy Bebop</strong> (20:30)</li>
+                                    <li><strong>Steins;Gate</strong> (22:30)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Saturday -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#saturdayCollapse" aria-expanded="false" aria-controls="saturdayCollapse">
+                                Saturday
+                            </button>
+                        </h2>
+                        <div id="saturdayCollapse" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <!-- Anime Schedule for Saturday -->
+                                <ul>
+                                    <li><strong>One Punch Man</strong> (19:00)</li>
+                                    <li><strong>Sword Art Online</strong> (21:30)</li>
+                                    <li><strong>Tokyo Ghoul</strong> (23:00)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sunday -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sundayCollapse" aria-expanded="false" aria-controls="sundayCollapse">
+                                Sunday
+                            </button>
+                        </h2>
+                        <div id="sundayCollapse" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <!-- Anime Schedule for Sunday -->
+                                <ul>
+                                    <li><strong>Neon Genesis Evangelion</strong> (15:30)</li>
+                                    <li><strong>Death Parade</strong> (18:30)</li>
+                                    <li><strong>My Youth Romantic Comedy Is Wrong, As I Expected</strong> (21:00)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
-        </nav>
-    </div>
 
-    <div class="container py-3">
-        <div class="title h1 text-center">Horizontal cards - Bootstrap 4</div>
-        <!-- Card Start -->
-        <div class="card">
-            <div class="row ">
+        </div>
 
-                <div class="col-md-7 px-3">
-                    <div class="card-block px-6">
-                        <h4 class="card-title">Horizontal Card with Carousel - Bootstrap 4 </h4>
-                        <p class="card-text">
-                            The Carousel code can be replaced with an img src, no problem. The added CSS brings shadow to the card and some adjustments to the prev/next buttons and the indicators is rounded now. As in Bootstrap 3
-                        </p>
-                        <p class="card-text">Made for usage, commonly searched for. Fork, like and use it. Just move the carousel div above the col containing the text for left alignment of images</p>
-                        <br>
-                        <a href="#" class="mt-auto btn btn-primary  ">Read More</a>
+        <div class="p-2 flex-fill">
+            <div class="searchbar container col col-lg-8 rounded align-self-end">
+                <nav class="navbar">
+                    <div class="container-fluid">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        </form>
                     </div>
-                </div>
-                <!-- Carousel start -->
-                <div class="col-md-5">
-                    <div id="carouselExampleIndicators" class="carousel slide">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="..." class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
+                </nav>
+            </div>
+            <div class="anime-card-container container py-3 col col-lg-8 rounded" id="boruto-card">
+                <!-- Card Start -->
+                <div class="card">
+                    <div class="row ">
+
+                        <div class="col-md-7 px-3">
+                            <div class="card-block px-6">
+                                <h4 class="card-title">Boruto: Naruto Next Generations</h4>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        Year of release: 2017
+                                    </li>
+                                    <li class="list-group-item">
+                                        Number of episodes: 293 (25 min.)
+                                    </li>
+                                    <li class="list-group-item">
+                                        Director: Abe Noriyuki
+                                    </li>
+                                    <li class="list-group-item">Description:"Boruto: Naruto Next Generations" follows the story of Boruto Uzumaki, the son of Naruto Uzumaki, as he navigates the challenges of being a young ninja in a technologically advanced Hidden Leaf Village. The series explores Boruto's journey of self-discovery, friendship, and the desire to forge his own path while facing new threats to the ninja world. The plot combines action, humor, and emotional moments, offering a fresh perspective on the legacy of the iconic "Naruto" series.</li>
+                                </ul>
+                                <a href="boruto.html" class="btn btn-primary btn-dark mt-auto">Watch</a>
+
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+                        <!-- Carousel start -->
+                        <div class="col-md-5 " style="" height="">
+                            <div id="carouselExampleIndicators1" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="media/boruto1.jpg" class="d-block mg-fluid rounded-start" height="510" width="500" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="media/boruto2.png" class="d-block mg-fluid rounded-start" height="510" width="500" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="media/boruto3.jpg" class="d-block mg-fluid rounded-start" height="510" width="500" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- End of carousel -->
                     </div>
                 </div>
-                <!-- End of carousel -->
+            </div>
+
+            <!-- End of card -->
+
+            <div class="anime-card-container container py-3 col col-lg-8 rounded" id="aot-card">
+                <!-- Card Start -->
+                <div class="card">
+                    <div class="row ">
+
+                        <div class="col-md-7 px-3">
+                            <div class="card-block px-6">
+                                <h4 class="card-title">Attack on Titan</h4>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        Year of release: 2013
+                                    </li>
+                                    <li class="list-group-item">
+                                        Number of episodes: 75 (25 min.)
+                                    </li>
+                                    <li class="list-group-item">
+                                        Director: Tetsurō Araki
+                                    </li>
+                                    <li class="list-group-item">
+                                        Description: In a world overrun by giant humanoid creatures, "Attack on Titan" follows the struggle for survival as humanity fights back behind enormous walls. The series explores themes of war, sacrifice, and the mysteries of a post-apocalyptic world.
+                                    </li>
+                                </ul>
+                                <a href="aot.html" class="btn btn-primary btn-dark mt-auto">Watch</a>
+                            </div>
+                        </div>
+                        <!-- Carousel start -->
+                        <div class="col-md-5 " style="" height="">
+                            <div id="carouselExampleIndicators2" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="media/aot1.jpg" class="d-block mg-fluid rounded-start" height="510" width="500" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="media/aot2.jpg" class="d-block mg-fluid rounded-start" height="510" width="500" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="media/aot3.jpg" class="d-block mg-fluid rounded-start" height="510" width="500" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- End of carousel -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- End of card -->
+
+            <div class="anime-card-container container py-3 col col-lg-8 rounded" id="mha-card">
+                <!-- Card Start -->
+                <div class="card">
+                    <div class="row ">
+
+                        <div class="col-md-7 px-3">
+                            <div class="card-block px-6">
+                                <h4 class="card-title">My Hero Academia</h4>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        Year of release: 2016
+                                    </li>
+                                    <li class="list-group-item">
+                                        Number of episodes: 114 (25 min.)
+                                    </li>
+                                    <li class="list-group-item">
+                                        Director: Kenji Nagasaki
+                                    </li>
+                                    <li class="list-group-item">
+                                        Description: Set in a world where individuals possess superpowers known as "Quirks," "My Hero Academia" follows Izuku Midoriya's journey to become a hero. The series explores themes of heroism, friendship, and the challenges of a superhero-in-training.
+                                    </li>
+                                </ul>
+                                <a href="mha.html" class="btn btn-primary btn-dark mt-auto">Watch</a>
+                            </div>
+                        </div>
+                        <!-- Carousel start -->
+                        <div class="col-md-5 " style="" height="">
+                            <div id="carouselExampleIndicators3" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="media/mha1.jpg" class="d-block mg-fluid rounded-start" height="510" width="500" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="media/mha2.jpg" class="d-block mg-fluid rounded-start" height="510" width="500" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="media/mha3.jpg" class="d-block mg-fluid rounded-start" height="510" width="500" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- End of carousel -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- End of card -->
+
+            <div class="anime-card-container container py-3 col col-lg-8 rounded" id="one-piece-card">
+                <!-- Card Start -->
+                <div class="card">
+                    <div class="row ">
+
+                        <div class="col-md-7 px-3">
+                            <div class="card-block px-6">
+                                <h4 class="card-title">One Piece</h4>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        Year of release: 1999
+                                    </li>
+                                    <li class="list-group-item">
+                                        Number of episodes: 1037+ (25 min.)
+                                    </li>
+                                    <li class="list-group-item">
+                                        Creator: Eiichiro Oda
+                                    </li>
+                                    <li class="list-group-item">
+                                        Description: "One Piece" follows Monkey D. Luffy and his pirate crew as they search for the legendary treasure known as the One Piece. The series is known for its adventurous spirit, diverse characters, and the pursuit of dreams in a vast, oceanic world.
+                                    </li>
+                                </ul>
+                                <a href="op.html" class="btn btn-primary btn-dark mt-auto">Watch</a>
+                            </div>
+                        </div>
+                        <!-- Carousel start -->
+                        <div class="col-md-5 " style="" height="">
+                            <div id="carouselExampleIndicators4" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="media/op1.jpg" class="d-block mg-fluid rounded-start" height="510" width="500" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="media/op2.jpg" class="d-block mg-fluid rounded-start" height="510" width="500" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="media/op3.jpg" class="d-block mg-fluid rounded-start" height="510" width="500" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- End of carousel -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- End of card -->
+
+            <div class="anime-card-container container py-3 col col-lg-8 rounded" id="demon-slayer-card">
+                <!-- Card Start -->
+                <div class="card">
+                    <div class="row ">
+
+                        <div class="col-md-7 px-3">
+                            <div class="card-block px-6">
+                                <h4 class="card-title">Demon Slayer</h4>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        Year of release: 2019
+                                    </li>
+                                    <li class="list-group-item">
+                                        Number of episodes: 26 (25 min.)
+                                    </li>
+                                    <li class="list-group-item">
+                                        Director: Haruo Sotozaki
+                                    </li>
+                                    <li class="list-group-item">
+                                        Description: Tanjiro Kamado's quest for justice unfolds in "Demon Slayer" as he battles demons and seeks a cure for his sister. The series is praised for its breathtaking animation, compelling characters, and intense, supernatural battles.
+                                    </li>
+                                </ul>
+                                <a href="#" class="btn btn-primary btn-dark mt-auto">Watch</a>
+                            </div>
+                        </div>
+                        <!-- Carousel start -->
+                        <div class="col-md-5 " style="" height="">
+                            <div id="carouselExampleIndicators5" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="media/ds1.jpg" class="d-block mg-fluid rounded-start" height="510" width="500" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="media/ds2.jpg" class="d-block mg-fluid rounded-start" height="510" width="500" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="media/ds3.jpg" class="d-block mg-fluid rounded-start" height="510" width="500" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- End of carousel -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- End of card -->
+    <!-- Remove the container if you want to extend the Footer to full width. -->
 
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
 
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Temxli/temxli.github.io" role="button">
+                    <i class="fab fa-github"></i>
+                </a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-white" href="">GateMedia.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <script src="https://kit.fontawesome.com/7d7a0f5866.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="scripts/index.js"></script>
+
 </body>
 </html>

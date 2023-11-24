@@ -1,0 +1,349 @@
+﻿<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!--Bootstrap 5.3-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--StyleSheets-->
+    <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+<body>
+    <div class="container text-start container pt-5 ">
+        <input class="container_toggle" type="checkbox" id="switch" name="mode">
+        <label for="switch">Toggle</label>
+    </div>
+
+    <audio id="clickSound" src="click-sound.mp3"></audio>
+
+    <div class="container">
+        <img id="randomImage" class="position-absolute start-50 translate-middle-x" src="media/gatemedia.png" alt="" width="667" height="150" style="position:absolute; top:50px;">
+    </div>
+
+    <nav class="navbar navbars justify-content-end" id="inner1">
+        <a class="navbar-brand " href="#">
+            <img src="media/mount.png" alt="Light Theme Image" width="1580" height="250" class="theme-image light">
+            <img src="media/mountDark.png" alt="Dark Theme Image" width="266" height="250" class="theme-image dark">
+        </a>
+    </nav>
+
+    <div class="align-self-end shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+        <div class="navbar-bg pb-3 " id="inner2">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col col-lg-6">
+                        <nav class="navbar navbar-expand-lg">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="index.html">
+                                    <img src="media/favicon.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                                    GateMedia
+                                </a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Features</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Pricing</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center offset-md-1">
+        <div class="w-25 P-2 container align-self-start">
+            <div class="col col-lg-12 ">
+                <div class="list-group py-2">
+                    <button type="button" class="list-group-item bg-dark list-group-item-action active" aria-current="true">
+                        Recent Updates
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right" data-bs-content="Demon Slayer: Kimetsu no Yaiba (2023) - Episodes 1-18 of 24. Next Episode: 19 (Scheduled for release on November 30). Tanjiro Kamado, a young boy turned demon slayer, seeks to avenge his family and cure his sister Nezuko, who has been turned into a demon.">
+                        Demon Slayer: Kimetsu no Yaiba
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="hover focus" data-bs-content="My Hero Academia (2023) - Episodes 1-21 of 24. Next Episode: 22 (Scheduled for release on November 30). In a world where most of the population has superpowers known as 'quirks,' Izuku Midoriya dreams of becoming a hero despite being quirkless.">
+                        My Hero Academia
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="hover focus" data-bs-content="Attack on Titan (2023) - Episodes 1-22 of 24. Eren Yeager, Mikasa Ackerman, and Armin Arlert, along with the Survey Corps, continue their battle against the mysterious Titans that threaten humanity's existence within enormous walled cities.">
+                        Attack on Titan
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="hover focus" data-bs-content="One Piece (2023) - Ongoing. Monkey D. Luffy and his diverse crew of pirates set sail in search of the legendary treasure known as One Piece.">
+                        One Piece
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="hover focus" data-bs-content="Jujutsu Kaisen (2023) - Second Season Episodes 1-18 of 23. Next Episode: 19 (Scheduled for release on November 30). Yuji Itadori joins a secret organization to battle curses after consuming a powerful cursed object.">
+                        Jujutsu Kaisen
+                    </button>
+                </div>
+
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <!-- Monday -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#mondayCollapse" aria-expanded="true" aria-controls="mondayCollapse">
+                                Monday
+                            </button>
+                        </h2>
+                        <div id="mondayCollapse" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <!-- Anime Schedule for Monday -->
+                                <ul>
+                                    <li><strong>My Hero Academia</strong> (20:00)</li>
+                                    <li><strong>Attack on Titan</strong> (21:00)</li>
+                                    <li><strong>Demon Slayer</strong> (22:30)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tuesday -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tuesdayCollapse" aria-expanded="false" aria-controls="tuesdayCollapse">
+                                Tuesday
+                            </button>
+                        </h2>
+                        <div id="tuesdayCollapse" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <!-- Anime Schedule for Tuesday -->
+                                <ul>
+                                    <li><strong>One Piece</strong> (22:00)</li>
+                                    <li><strong>Jujutsu Kaisen</strong> (23:30)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wednesday -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wednesdayCollapse" aria-expanded="false" aria-controls="wednesdayCollapse">
+                                Wednesday
+                            </button>
+                        </h2>
+                        <div id="wednesdayCollapse" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <!-- Anime Schedule for Wednesday -->
+                                <ul>
+                                    <li><strong>Naruto: Shippuden</strong> (20:30)</li>
+                                    <li><strong>Death Note</strong> (22:30)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thursday -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#thursdayCollapse" aria-expanded="false" aria-controls="thursdayCollapse">
+                                Thursday
+                            </button>
+                        </h2>
+                        <div id="thursdayCollapse" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <!-- Anime Schedule for Thursday -->
+                                <ul>
+                                    <li><strong>Fullmetal Alchemist: Brotherhood</strong> (20:00)</li>
+                                    <li><strong>Hunter x Hunter</strong> (22:00)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Friday -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fridayCollapse" aria-expanded="false" aria-controls="fridayCollapse">
+                                Friday
+                            </button>
+                        </h2>
+                        <div id="fridayCollapse" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <!-- Anime Schedule for Friday -->
+                                <ul>
+                                    <li><strong>Dragon Ball Z</strong> (18:00)</li>
+                                    <li><strong>Cowboy Bebop</strong> (20:30)</li>
+                                    <li><strong>Steins;Gate</strong> (22:30)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Saturday -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#saturdayCollapse" aria-expanded="false" aria-controls="saturdayCollapse">
+                                Saturday
+                            </button>
+                        </h2>
+                        <div id="saturdayCollapse" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <!-- Anime Schedule for Saturday -->
+                                <ul>
+                                    <li><strong>One Punch Man</strong> (19:00)</li>
+                                    <li><strong>Sword Art Online</strong> (21:30)</li>
+                                    <li><strong>Tokyo Ghoul</strong> (23:00)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sunday -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sundayCollapse" aria-expanded="false" aria-controls="sundayCollapse">
+                                Sunday
+                            </button>
+                        </h2>
+                        <div id="sundayCollapse" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <!-- Anime Schedule for Sunday -->
+                                <ul>
+                                    <li><strong>Neon Genesis Evangelion</strong> (15:30)</li>
+                                    <li><strong>Death Parade</strong> (18:30)</li>
+                                    <li><strong>My Youth Romantic Comedy Is Wrong, As I Expected</strong> (21:00)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="p-2 flex-fill">
+            <div class="container">
+                <div class="col col-lg-11">
+                    <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                        <div class="flex-shrink-0">
+                            <img src="media/mha1.jpg" class="w-50 h-50" alt="My Hero Academia Poster">
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h2>My Hero Academia</h2>
+                            <p>
+                                <strong>Year of Release:</strong> 2023<br>
+                                <strong>Genre:</strong> Action, Comedy, Superhero<br>
+                                <strong>Type:</strong> TV<br>
+                                <strong>Number of Episodes:</strong> 24 (25 min. each)<br>
+                                <strong>Director:</strong> Kenji Nagasaki<br>
+                                <strong>Rating:</strong>
+                                <span id="mhaUserRating">No rating</span>
+                                <button class="btn bg-dark btn-primary" data-bs-toggle="modal" data-bs-target="#mhaRatingModal">Rate</button>
+                            </p>
+                            <p>
+                                In a world where most of the population has superpowers known as 'quirks,' Izuku Midoriya dreams of becoming a hero despite being quirkless.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Rating Modal for My Hero Academia -->
+                    <div class="modal fade" id="mhaRatingModal" tabindex="-1" aria-labelledby="mhaRatingModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="ratingModalLabel">Rate Attack on Titan</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Please select your rating:</p>
+                                    <div class="rating">
+                                        <i class="star fa fa-star active" data-rating="1"></i>
+                                        <i class="star fa fa-star-o" data-rating="2"></i>
+                                        <i class="star fa fa-star-o" data-rating="3"></i>
+                                        <i class="star fa fa-star-o" data-rating="4"></i>
+                                        <i class="star fa fa-star-o" data-rating="5"></i>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="nav nav-underline">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="trailerLink" aria-current="page" href="#">Trailer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="seriesLink" href="#">Series</a>
+                        </li>
+                    </ul>
+                    <video id="animePlayer" class="w-100" controls>
+                        <source src="media/boruto.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container col col-lg-11 py-3">
+        <!-- Comment Section -->
+        <div class="container mt-5">
+            <h2 class="text-center mb-4">Comments</h2>
+            <form id="commentForm">
+                <div class="mb-3">
+                    <p for="nickname" class="form-label">Nickname:</p>
+                    <input type="text" class="form-control" id="nickname" required>
+                </div>
+                <div class="mb-3">
+                    <p for="comment" class="form-label">Comment:</p>
+                    <textarea class="form-control" id="comment" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Comment</button>
+            </form>
+
+            <div id="commentsList" class="mt-4">
+                <!-- Comments will be displayed here dynamically -->
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Temxli/temxli.github.io" role="button">
+                    <i class="fab fa-github"></i>
+                    <img<>
+                </a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            � 2020 Copyright:
+            <a class="text-white" href="">GateMedia.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <script src="https://kit.fontawesome.com/7d7a0f5866.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/videoplayer.js"></script>
+</body>
+</html>
